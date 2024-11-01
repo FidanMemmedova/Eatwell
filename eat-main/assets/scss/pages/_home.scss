@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.summer {
+    &_content {
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            width: 30%;
+
+            &_img {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    .summer {
+        .cards {
+            flex-direction: column;
+            gap: 20px;
+            .card {
+                width: 100%;
+                border: 1px solid red;
+            }
+        }
+    }
+}
+@media screen and (min-width:576px) and (max-width:991px){
+    .summer {
+        .cards {
+            flex-wrap: wrap;
+            .card {
+                width: 48%;
+                border: 1px solid red;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
